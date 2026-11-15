@@ -1,0 +1,695 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Malavika ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffb6c9, #ffe0e9, #ffc0cb);
+    color: #8b214c;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.hearts {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.heart {
+    position: absolute;
+    bottom: -30px;
+    animation: floatUp linear infinite;
+    opacity: .65;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    20% { opacity: .8; }
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    max-width: 850px;
+    margin: auto;
+    padding: 30px 20px 60px;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(48px, 10vw, 75px);
+    color: #c2185b;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 38px;
+    color: #c2185b;
+}
+
+p {
+    line-height: 1.8;
+}
+
+.intro {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.intro-card {
+    background: rgba(255,255,255,.68);
+    border: 1px solid white;
+    border-radius: 25px;
+    padding: 40px 25px;
+    width: 100%;
+    box-shadow: 0 10px 40px rgba(150,30,80,.15);
+}
+
+.subtitle {
+    margin: 15px auto 25px;
+    max-width: 500px;
+    font-size: 14px;
+    color: #86435d;
+}
+
+.main-btn {
+    border: none;
+    padding: 14px 32px;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #e91e63, #ff69a6);
+    color: white;
+    font-size: 15px;
+    font-family: inherit;
+    cursor: pointer;
+    box-shadow: 0 5px 20px #e91e6355;
+    transition: .3s;
+}
+
+.main-btn:hover {
+    transform: scale(1.06);
+}
+
+#surprise {
+    display: none;
+    animation: appear 1s ease;
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.section-text {
+    margin: 15px auto 25px;
+    max-width: 600px;
+    font-size: 14px;
+}
+
+.name-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin: 30px auto;
+}
+
+.letter-btn {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background: linear-gradient(145deg, #ff4f91, #d81b60);
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 5px 15px #c2185b44;
+    transition: .3s;
+}
+
+.letter-btn:hover {
+    transform: translateY(-7px) scale(1.1);
+}
+
+.letter-btn.opened {
+    background: #fff;
+    color: #d81b60;
+    border-color: #d81b60;
+    transform: scale(1.08);
+}
+
+.progress {
+    margin: 15px auto;
+    color: #a32d5a;
+    font-size: 13px;
+}
+
+.progress-bar {
+    height: 9px;
+    max-width: 350px;
+    margin: 10px auto;
+    background: #ffffffa8;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 0;
+    height: 100%;
+    background: #d81b60;
+    transition: .5s;
+}
+
+.message-box {
+    display: none;
+    background: rgba(255,255,255,.83);
+    padding: 30px 23px;
+    margin: 25px auto;
+    border-radius: 22px;
+    max-width: 620px;
+    box-shadow: 0 8px 30px #a52c5b20;
+    animation: appear .6s ease;
+}
+
+.message-box h2 {
+    margin-bottom: 15px;
+}
+
+.message-box p {
+    font-size: 14px;
+    color: #744052;
+    white-space: pre-line;
+}
+
+.final-section {
+    display: none;
+    margin: 35px auto;
+    animation: appear 1s ease;
+}
+
+.envelope {
+    max-width: 600px;
+    margin: 20px auto;
+    background: #fff9fc;
+    border: 2px solid #ffc1d6;
+    border-radius: 15px;
+    padding: 30px 23px;
+    box-shadow: 0 10px 35px #b32e6540;
+    text-align: left;
+}
+
+.envelope h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.envelope p {
+    color: #704052;
+    font-size: 14px;
+    margin-bottom: 14px;
+}
+
+.signature {
+    text-align: right;
+    font-family: 'Great Vibes', cursive;
+    font-size: 34px;
+    color: #c2185b;
+    margin-top: 25px;
+}
+
+.love-footer {
+    margin-top: 50px;
+    font-family: 'Great Vibes', cursive;
+    font-size: 27px;
+    color: #c2185b;
+}
+
+#confetti {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 5;
+}
+
+@media(max-width: 480px) {
+    .container { padding: 20px 14px 45px; }
+    .intro-card { padding: 35px 18px; }
+    .letter-btn { width: 48px; height: 48px; font-size: 21px; }
+    .message-box { padding: 23px 17px; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="hearts" id="hearts"></div>
+<canvas id="confetti"></canvas>
+
+<div class="container">
+
+    <!-- WELCOME SCREEN -->
+
+    <section class="intro" id="intro">
+        <div class="intro-card">
+
+            <div style="font-size:45px">💗</div>
+
+            <h1>For My Malavika</h1>
+
+            <p class="subtitle">
+                Somewhere between a thousand ordinary moments,
+                you became my favourite part of life.
+                <br><br>
+                I have something special for you.
+                A little surprise, made with all my love.
+            </p>
+
+            <button class="main-btn" onclick="startSurprise()">
+                Open Your Surprise ❤️
+            </button>
+
+            <p style="margin-top:20px;font-size:12px">
+                Made with endless love by Manikanta
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- MAIN SURPRISE -->
+
+    <section id="surprise">
+
+        <h1>Happy Birthday ❤️</h1>
+
+        <h2>My Beautiful Malavika</h2>
+
+        <p class="section-text">
+            Today is not just your birthday.
+            It is the day the world received someone
+            who makes my world more beautiful.
+            <br><br>
+            I have hidden eight little pieces of my heart
+            behind the letters of your name.
+            Touch each letter to discover them.
+        </p>
+
+        <div class="name-buttons" id="buttons">
+
+            <button class="letter-btn" onclick="openLetter(0)">M</button>
+            <button class="letter-btn" onclick="openLetter(1)">A</button>
+            <button class="letter-btn" onclick="openLetter(2)">L</button>
+            <button class="letter-btn" onclick="openLetter(3)">A</button>
+            <button class="letter-btn" onclick="openLetter(4)">V</button>
+            <button class="letter-btn" onclick="openLetter(5)">I</button>
+            <button class="letter-btn" onclick="openLetter(6)">K</button>
+            <button class="letter-btn" onclick="openLetter(7)">A</button>
+
+        </div>
+
+        <div class="progress">
+            <span id="count">0</span> / 8 love letters discovered 💕
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill" id="progress"></div>
+        </div>
+
+        <div class="message-box" id="messageBox">
+            <h2 id="messageTitle"></h2>
+            <p id="messageText"></p>
+        </div>
+
+
+        <!-- FINAL LETTER -->
+
+        <section class="final-section" id="final">
+
+            <h1>You Found My Heart! 💖</h1>
+
+            <p class="section-text">
+                You have unlocked every little secret.
+                But there is one last thing I want you to read.
+            </p>
+
+            <button class="main-btn" onclick="openFinal()">
+                Open My Final Love Letter 💌
+            </button>
+
+            <div class="envelope" id="finalLetter" style="display:none">
+
+                <h2>To My Dearest Malavika ❤️</h2>
+
+                <p>
+                    My dearest Malavika,
+                </p>
+
+                <p>
+                    First of all, the happiest birthday to the most
+                    beautiful person in my world.
+                </p>
+
+                <p>
+                    I honestly don't know where to begin because
+                    no words could ever completely explain what
+                    you mean to me.
+                </p>
+
+                <p>
+                    You are more than just someone I love.
+                    You are my favourite thought, my happiest
+                    smile, my peaceful place and the reason
+                    ordinary days feel special.
+                </p>
+
+                <p>
+                    I may not always be perfect. I may not always
+                    find the right words to express my feelings.
+                    But one thing I want you to know is that
+                    my love for you is real.
+                </p>
+
+                <p>
+                    I wish I could collect all the stars in the sky
+                    and place them in your hands, just to show you
+                    how special you are to me.
+                </p>
+
+                <p>
+                    On your birthday, I wish you endless happiness,
+                    beautiful opportunities, good health and
+                    everything your heart dreams of.
+                </p>
+
+                <p>
+                    And selfishly, I wish to be beside you through
+                    all those beautiful moments, celebrating your
+                    victories, supporting your dreams and creating
+                    countless memories together.
+                </p>
+
+                <p>
+                    Thank you for being you.
+                    Thank you for bringing so much happiness
+                    into my life.
+                </p>
+
+                <p>
+                    No matter how many birthdays come and go,
+                    I hope I always get the chance to remind you
+                    how deeply and genuinely you are loved.
+                </p>
+
+                <p>
+                    Happy Birthday, my love.
+                    You will always have a special place in my heart.
+                </p>
+
+                <p style="text-align:center;font-size:20px">
+                    I LOVE YOU, MALAVIKA! ❤️
+                </p>
+
+                <div class="signature">
+                    Forever yours,<br>
+                    Manikanta ❤️
+                </div>
+
+            </div>
+
+        </section>
+
+    </section>
+
+    <div class="love-footer">
+        Made with love, just for you 💗
+    </div>
+
+</div>
+
+
+<script>
+
+// FLOATING HEARTS
+
+const heartContainer = document.getElementById("hearts");
+
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = ["❤️","💕","💗","💖","🌸"][Math.floor(Math.random()*5)];
+
+    heart.style.left = Math.random()*100 + "%";
+    heart.style.fontSize = (12 + Math.random()*22) + "px";
+    heart.style.animationDuration = (6 + Math.random()*7) + "s";
+
+    heartContainer.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 13000);
+}
+
+setInterval(createHeart, 450);
+
+
+// START SURPRISE
+
+function startSurprise() {
+    document.getElementById("intro").style.display = "none";
+    document.getElementById("surprise").style.display = "block";
+
+    window.scrollTo({top:0, behavior:"smooth"});
+}
+
+
+// SECRET LOVE LETTERS
+
+const letters = [
+
+{
+    title: "M – My Magical Girl 💗",
+    text: `Malavika, you are truly magical to me.
+
+Your presence makes even the simplest moments
+feel like beautiful memories.
+
+You are my favourite kind of magic.`
+},
+
+{
+    title: "A – Always My Favourite ❤️",
+    text: `Among all the people in this world,
+you will always be my favourite.
+
+No matter how busy life gets,
+my heart always finds its way back to you.`
+},
+
+{
+    title: "L – Love of My Life 💕",
+    text: `I don't need a perfect world.
+I just want a world where I can
+share my happiness, dreams and memories with you.
+
+You make my world beautiful.`
+},
+
+{
+    title: "A – A Beautiful Soul 🌹",
+    text: `Your smile is something I could never get tired of.
+
+Your little expressions, your laughter
+and the way you are make you so special to me.
+
+Never stop being the beautiful person you are.`
+},
+
+{
+    title: "V – Very Special to Me 💖",
+    text: `You are not replaceable.
+You are not ordinary.
+
+You are someone I treasure deeply.
+
+I hope you always remember how special
+you are to me.`
+},
+
+{
+    title: "I – In Every Little Dream ✨",
+    text: `Whenever I imagine beautiful moments ahead,
+I find myself wishing you were there.
+
+I want to make memories,
+laugh together and celebrate life's little joys.`
+},
+
+{
+    title: "K – Keeping You in My Heart 💘",
+    text: `Distance, time or difficult days
+cannot change the beautiful place
+you have in my heart.
+
+You are someone I will always cherish.`
+},
+
+{
+    title: "A – Always and Forever 💍",
+    text: `If I could make one birthday wish for myself,
+it would be to see you happy.
+
+May your life be filled with love,
+success and endless smiles.
+
+And may I always be one of the reasons
+behind that beautiful smile.`
+}
+
+];
+
+let opened = new Set();
+
+function openLetter(index) {
+
+    const box = document.getElementById("messageBox");
+
+    document.getElementById("messageTitle").innerText =
+        letters[index].title;
+
+    document.getElementById("messageText").innerText =
+        letters[index].text;
+
+    box.style.display = "block";
+
+    document.querySelectorAll(".letter-btn")[index]
+        .classList.add("opened");
+
+    opened.add(index);
+
+    document.getElementById("count").innerText =
+        opened.size;
+
+    document.getElementById("progress").style.width =
+        (opened.size / 8 * 100) + "%";
+
+    if(opened.size === 8) {
+        document.getElementById("final").style.display = "block";
+
+        setTimeout(() => {
+            document.getElementById("final").scrollIntoView({
+                behavior:"smooth",
+                block:"center"
+            });
+        }, 500);
+
+        celebrate();
+    }
+}
+
+
+// FINAL LETTER
+
+function openFinal() {
+
+    const letter = document.getElementById("finalLetter");
+
+    letter.style.display = "block";
+
+    letter.scrollIntoView({
+        behavior:"smooth",
+        block:"center"
+    });
+
+    celebrate();
+}
+
+
+// HEART CONFETTI
+
+function celebrate() {
+
+    const canvas = document.getElementById("confetti");
+    const ctx = canvas.getContext("2d");
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const particles = [];
+
+    for(let i=0; i<130; i++) {
+
+        particles.push({
+            x: Math.random()*canvas.width,
+            y: -Math.random()*canvas.height,
+            size: Math.random()*8+3,
+            speed: Math.random()*4+2,
+            symbol: Math.random() > .5 ? "💗" : "✨"
+        });
+
+    }
+
+    let frames = 0;
+
+    function animate() {
+
+        ctx.clearRect(0,0,canvas.width,canvas.height);
+
+        particles.forEach(p => {
+
+            ctx.font = p.size*2 + "px Arial";
+            ctx.fillText(p.symbol,p.x,p.y);
+
+            p.y += p.speed;
+            p.x += Math.sin(p.y/30);
+
+        });
+
+        frames++;
+
+        if(frames < 180) {
+            requestAnimationFrame(animate);
+        } else {
+            ctx.clearRect(0,0,canvas.width,canvas.height);
+        }
+
+    }
+
+    animate();
+}
+
+window.addEventListener("resize", () => {
+    const canvas = document.getElementById("confetti");
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+});
+
+</script>
+
+</body>
+</html>
